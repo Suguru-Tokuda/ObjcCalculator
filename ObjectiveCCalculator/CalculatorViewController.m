@@ -40,6 +40,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initValues];
+    [self setBtnColors];
     [self setupUI];
 }
 
@@ -49,26 +50,30 @@
 }
 
 - (void)initValues {
+    _vm = [[CalculatorViewModel alloc] init];
+    [_vm setInitialValues];
     _displayedNumberType = Sum;
 }
 
 - (void)setupUI {
     self.view.backgroundColor = UIColor.systemBackgroundColor;
-    _defaultBtnBackgroundColor = UIColor.systemBlueColor;
-    _defaultBtnTintColor = UIColor.whiteColor;
-    _selectedBtnBackgroundColor = UIColor.whiteColor;
-    _selectedBtnTintColor = UIColor.systemBlueColor;
-    
-    _vm = [[CalculatorViewModel alloc] init];
-    [_vm setInitialValues];
     
     _numberLabel = [self getNumberLabel:_vm.sum.intValue];
     _outerStackView = [self getOuerStackView];
     [_outerStackView addArrangedSubview:_numberLabel];
     [self addKeyButtons: _outerStackView];
     
+    // Add stack view into view
     [self.view addSubview:_outerStackView];
+    // Apply constraints
     [self applyConstraints];
+}
+
+- (void)setBtnColors {
+    _defaultBtnBackgroundColor = UIColor.systemPinkColor;
+    _defaultBtnTintColor = UIColor.whiteColor;
+    _selectedBtnBackgroundColor = UIColor.whiteColor;
+    _selectedBtnTintColor = UIColor.systemPinkColor;
 }
 
 - (void)applyConstraints {
@@ -187,7 +192,11 @@
     btn.tintColor = tintColor;
     btn.configuration = btnConfig;
     
-    [NSLayoutConstraint activateConstraints:@[[btn.heightAnchor constraintEqualToConstant:100]]];
+    // Get height
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat height = width / 4;
+        
+    [NSLayoutConstraint activateConstraints:@[[btn.heightAnchor constraintEqualToConstant:height]]];
     return btn;
 }
 
