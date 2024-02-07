@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		BB51FCA52B6BE7CD006A6A4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB51FCA42B6BE7CD006A6A4C /* AppDelegate.m */; };
 		BB51FCA82B6BE7CD006A6A4C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB51FCA72B6BE7CD006A6A4C /* SceneDelegate.m */; };
-		BB51FCAB2B6BE7CD006A6A4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB51FCAA2B6BE7CD006A6A4C /* ViewController.m */; };
+		BB51FCAB2B6BE7CD006A6A4C /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB51FCAA2B6BE7CD006A6A4C /* CalculatorViewController.m */; };
 		BB51FCAE2B6BE7CD006A6A4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB51FCAC2B6BE7CD006A6A4C /* Main.storyboard */; };
 		BB51FCB02B6BE7D0006A6A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB51FCAF2B6BE7D0006A6A4C /* Assets.xcassets */; };
 		BB51FCB32B6BE7D0006A6A4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB51FCB12B6BE7D0006A6A4C /* LaunchScreen.storyboard */; };
 		BB51FCB62B6BE7D0006A6A4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB51FCB52B6BE7D0006A6A4C /* main.m */; };
+		BB51FCC12B6D4047006A6A4C /* CalculatorEnums.m in Sources */ = {isa = PBXBuildFile; fileRef = BB51FCC02B6D4047006A6A4C /* CalculatorEnums.m */; };
+		BB51FCC52B7151A0006A6A4C /* CalculatorViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB51FCC42B7151A0006A6A4C /* CalculatorViewModel.m */; };
+		BB51FCC92B727030006A6A4C /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB51FCC82B727030006A6A4C /* NSString+Extensions.m */; };
+		BB51FCCC2B727CB7006A6A4C /* NSNumber+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB51FCCB2B727CB7006A6A4C /* NSNumber+Extensions.m */; };
+		BB51FCCF2B729928006A6A4C /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = BB51FCCE2B729928006A6A4C /* UIImage+Resize.m */; };
+		BB51FCD22B73C9AE006A6A4C /* UIButton+Highlight.m in Sources */ = {isa = PBXBuildFile; fileRef = BB51FCD12B73C9AE006A6A4C /* UIButton+Highlight.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +28,25 @@
 		BB51FCA42B6BE7CD006A6A4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BB51FCA62B6BE7CD006A6A4C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		BB51FCA72B6BE7CD006A6A4C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		BB51FCA92B6BE7CD006A6A4C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BB51FCAA2B6BE7CD006A6A4C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BB51FCA92B6BE7CD006A6A4C /* CalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		BB51FCAA2B6BE7CD006A6A4C /* CalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		BB51FCAD2B6BE7CD006A6A4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB51FCAF2B6BE7D0006A6A4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB51FCB22B6BE7D0006A6A4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB51FCB42B6BE7D0006A6A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB51FCB52B6BE7D0006A6A4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB51FCBF2B6D3E08006A6A4C /* CalculatorEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorEnums.h; sourceTree = "<group>"; };
+		BB51FCC02B6D4047006A6A4C /* CalculatorEnums.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorEnums.m; sourceTree = "<group>"; };
+		BB51FCC32B715110006A6A4C /* CalculatorViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorViewModel.h; sourceTree = "<group>"; };
+		BB51FCC42B7151A0006A6A4C /* CalculatorViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewModel.m; sourceTree = "<group>"; };
+		BB51FCC72B726FC9006A6A4C /* NSString+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
+		BB51FCC82B727030006A6A4C /* NSString+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
+		BB51FCCA2B727C95006A6A4C /* NSNumber+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Extensions.h"; sourceTree = "<group>"; };
+		BB51FCCB2B727CB7006A6A4C /* NSNumber+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Extensions.m"; sourceTree = "<group>"; };
+		BB51FCCD2B72991B006A6A4C /* UIImage+Resize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		BB51FCCE2B729928006A6A4C /* UIImage+Resize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		BB51FCD02B73C81E006A6A4C /* UIButton+Highlight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Highlight.h"; sourceTree = "<group>"; };
+		BB51FCD12B73C9AE006A6A4C /* UIButton+Highlight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Highlight.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +79,15 @@
 		BB51FCA22B6BE7CD006A6A4C /* ObjectiveCCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				BB51FCC62B726FAD006A6A4C /* Extensions */,
+				BB51FCC22B6D6212006A6A4C /* ViewModels */,
+				BB51FCBC2B6D39D0006A6A4C /* Enums */,
 				BB51FCA32B6BE7CD006A6A4C /* AppDelegate.h */,
 				BB51FCA42B6BE7CD006A6A4C /* AppDelegate.m */,
 				BB51FCA62B6BE7CD006A6A4C /* SceneDelegate.h */,
 				BB51FCA72B6BE7CD006A6A4C /* SceneDelegate.m */,
-				BB51FCA92B6BE7CD006A6A4C /* ViewController.h */,
-				BB51FCAA2B6BE7CD006A6A4C /* ViewController.m */,
+				BB51FCA92B6BE7CD006A6A4C /* CalculatorViewController.h */,
+				BB51FCAA2B6BE7CD006A6A4C /* CalculatorViewController.m */,
 				BB51FCAC2B6BE7CD006A6A4C /* Main.storyboard */,
 				BB51FCAF2B6BE7D0006A6A4C /* Assets.xcassets */,
 				BB51FCB12B6BE7D0006A6A4C /* LaunchScreen.storyboard */,
@@ -74,6 +95,39 @@
 				BB51FCB52B6BE7D0006A6A4C /* main.m */,
 			);
 			path = ObjectiveCCalculator;
+			sourceTree = "<group>";
+		};
+		BB51FCBC2B6D39D0006A6A4C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				BB51FCBF2B6D3E08006A6A4C /* CalculatorEnums.h */,
+				BB51FCC02B6D4047006A6A4C /* CalculatorEnums.m */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		BB51FCC22B6D6212006A6A4C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BB51FCC32B715110006A6A4C /* CalculatorViewModel.h */,
+				BB51FCC42B7151A0006A6A4C /* CalculatorViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BB51FCC62B726FAD006A6A4C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB51FCC72B726FC9006A6A4C /* NSString+Extensions.h */,
+				BB51FCC82B727030006A6A4C /* NSString+Extensions.m */,
+				BB51FCCA2B727C95006A6A4C /* NSNumber+Extensions.h */,
+				BB51FCCB2B727CB7006A6A4C /* NSNumber+Extensions.m */,
+				BB51FCCD2B72991B006A6A4C /* UIImage+Resize.h */,
+				BB51FCCE2B729928006A6A4C /* UIImage+Resize.m */,
+				BB51FCD02B73C81E006A6A4C /* UIButton+Highlight.h */,
+				BB51FCD12B73C9AE006A6A4C /* UIButton+Highlight.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,10 +200,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB51FCAB2B6BE7CD006A6A4C /* ViewController.m in Sources */,
+				BB51FCCC2B727CB7006A6A4C /* NSNumber+Extensions.m in Sources */,
+				BB51FCC52B7151A0006A6A4C /* CalculatorViewModel.m in Sources */,
+				BB51FCAB2B6BE7CD006A6A4C /* CalculatorViewController.m in Sources */,
+				BB51FCC92B727030006A6A4C /* NSString+Extensions.m in Sources */,
 				BB51FCA52B6BE7CD006A6A4C /* AppDelegate.m in Sources */,
+				BB51FCCF2B729928006A6A4C /* UIImage+Resize.m in Sources */,
+				BB51FCD22B73C9AE006A6A4C /* UIButton+Highlight.m in Sources */,
 				BB51FCB62B6BE7D0006A6A4C /* main.m in Sources */,
 				BB51FCA82B6BE7CD006A6A4C /* SceneDelegate.m in Sources */,
+				BB51FCC12B6D4047006A6A4C /* CalculatorEnums.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,11 +361,10 @@
 				DEVELOPMENT_TEAM = FVEGF5DQ7U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectiveCCalculator/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,8 +372,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sugurutokuda.ObjectiveCCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -328,11 +390,10 @@
 				DEVELOPMENT_TEAM = FVEGF5DQ7U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectiveCCalculator/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,8 +401,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sugurutokuda.ObjectiveCCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
