@@ -70,10 +70,10 @@
 }
 
 - (void)setBtnColors {
-    _defaultBtnBackgroundColor = UIColor.systemPinkColor;
+    _defaultBtnBackgroundColor = UIColor.systemBlueColor;
     _defaultBtnTintColor = UIColor.whiteColor;
     _selectedBtnBackgroundColor = UIColor.whiteColor;
-    _selectedBtnTintColor = UIColor.systemPinkColor;
+    _selectedBtnTintColor = UIColor.systemBlueColor;
 }
 
 - (void)applyConstraints {
@@ -323,25 +323,29 @@
             [self updateNumberLabel:Input1 withPeriod:_vm.appendPeriod];
             break;
         default:
-            if ([CalculatorEnums isCalculationCase:_vm.lastSymbol] && _vm.lastSymbol != symbol && _vm.input2) {
-                [_vm performCalculation:_vm.lastSymbol];
-                [self updateNumberLabel:Sum withPeriod:_vm.appendPeriod];
-                _vm.symbolHighlighted = symbol;
-                _vm.numberToAppendTo = Input2;
-                _vm.input2 = NULL;
-                [self updateCalculatorSymbolBtnTextColor: _vm.symbolHighlighted symbol:symbol];
-            } else {
-                _vm.symbolHighlighted = symbol;
-                _vm.numberToAppendTo = Input2;
-                [self updateCalculatorSymbolBtnTextColor: _vm.symbolHighlighted symbol:symbol];
-            }
-            
-            _vm.lastSymbol = symbol;
+            [self handleCalculateLogic:symbol];
             break;
     }
     
     if (symbol != Period)
         _vm.appendPeriod = false;
+}
+
+- (void)handleCalculateLogic: (CalculatorSymbolEnum) symbol {
+    if ([CalculatorEnums isCalculationCase:_vm.lastSymbol] && (_vm.lastSymbol != symbol || _vm.lastSymbol == symbol) && _vm.input2) {
+        [_vm performCalculation:_vm.lastSymbol];
+        [self updateNumberLabel:Sum withPeriod:_vm.appendPeriod];
+        _vm.symbolHighlighted = symbol;
+        _vm.numberToAppendTo = Input2;
+        _vm.input2 = NULL;
+        [self updateCalculatorSymbolBtnTextColor: _vm.symbolHighlighted symbol:symbol];
+    } else {
+        _vm.symbolHighlighted = symbol;
+        _vm.numberToAppendTo = Input2;
+        [self updateCalculatorSymbolBtnTextColor: _vm.symbolHighlighted symbol:symbol];
+    }
+    
+    _vm.lastSymbol = symbol;
 }
 
 - (void)handleClearBtnTapped {

@@ -39,9 +39,9 @@
 - (void)performCalculation: (CalculatorSymbolEnum) symbol {
     double firstValue = _input1 == NULL ? _sum.doubleValue : _input1.doubleValue;
     double input2Value = 0;
-    
+
     // use the new input2 value
-    if (_input2 && _lastOperationNum && _input2.doubleValue != _lastOperationNum.doubleValue) {
+    if (_input2 && _lastOperationNum && (_input2.doubleValue != _lastOperationNum.doubleValue || _input2.doubleValue == _lastOperationNum.doubleValue)) {
         input2Value = _input2.doubleValue;
     } else if (_input2 && !_lastOperationNum) {
         input2Value = _input2.doubleValue;
@@ -68,6 +68,7 @@
             break;
     }
     
+    _input1 = NULL;
     _lastOperationNum = [NSNumber numberWithDouble:input2Value];
 }
 
