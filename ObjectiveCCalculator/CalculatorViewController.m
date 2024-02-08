@@ -310,17 +310,10 @@
             [self handlePercentBtuTapped];
             break;
         case Equals:
-            if (_vm.lastSymbol != None) {
-                [_vm performCalculation:_vm.lastSymbol];
-                [self updateNumberLabel:Sum withPeriod:_vm.appendPeriod];
-                _vm.input1 = NULL;
-                _vm.numberToAppendTo = Input1;
-                _vm.symbolHighlighted = None;
-            }
+            [self handleEqualsSymbol];
             break;
         case Period:
-            _vm.appendPeriod = true;
-            [self updateNumberLabel:Input1 withPeriod:_vm.appendPeriod];
+            [self handlePeriodSymbol];
             break;
         default:
             [self handleCalculateLogic:symbol];
@@ -329,6 +322,17 @@
     
     if (symbol != Period)
         _vm.appendPeriod = false;
+}
+
+// MARK: support functions for handleSymbolInput
+- (void)handleEqualsSymbol {
+    if (_vm.lastSymbol != None) {
+        [_vm performCalculation:_vm.lastSymbol];
+        [self updateNumberLabel:Sum withPeriod:_vm.appendPeriod];
+        _vm.input1 = NULL;
+        _vm.numberToAppendTo = Input1;
+        _vm.symbolHighlighted = None;
+    }
 }
 
 - (void)handleCalculateLogic: (CalculatorSymbolEnum) symbol {
@@ -366,6 +370,11 @@
 - (void)handlePercentBtuTapped {
     [_vm percentile:_displayedNumberType];
     [self updateNumberLabel:_displayedNumberType withPeriod:_vm.appendPeriod];
+}
+
+- (void)handlePeriodSymbol {
+    _vm.appendPeriod = true;
+    [self updateNumberLabel:Input1 withPeriod:_vm.appendPeriod];
 }
 
 - (void)clear {
@@ -411,32 +420,6 @@
     labelText = [labelText trimTrailingZeros];
     _displayedNumberType = numberToDisplay;
     _numberLabel.text = labelText;
-}
-
-- (int)getNumberOfNonZeroNumbersAfterPeriod: (double) number {
-    int retVal = 0;
-    
-    NSString *str = [NSString stringWithFormat:@"%f", number];
-    bool periodChecked = false;
-    
-    for (NSUInteger i = 0; i < str.length; i++) {
-        char ch = [str characterAtIndex:i];
-        
-        if (ch == '.') {
-            periodChecked = true;
-        }
-    }
-    
-    for (NSUInteger i = str.length - 1; i >= 0; i--) {
-        char ch = [str characterAtIndex:i];
-        
-        if (ch != '0' && ch != '.')
-            retVal += 1;
-        else if (ch == '.')
-            break;
-    }
-    
-    return retVal;
 }
 
 - (void)resetCalculatorButtonColors {
